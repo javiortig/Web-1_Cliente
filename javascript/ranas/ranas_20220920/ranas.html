@@ -1,0 +1,112 @@
+<html>
+<head>
+	<title>Juego Ranas</title>
+
+	<style>
+		body {
+			background-color: #0e84aa;
+		}
+	</style>
+
+</head>
+
+	
+<body align="center">
+	<h1>
+		Juego Ranas en HTML y
+		Java Script 3
+	</h1>
+
+	<table border="1" align="center" bordercolor="#000608">
+		<tr>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+		</tr>
+		<tr>
+			<td> <img id="0" src="L.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="1" src="L.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="2" src="L.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="3" src="B.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="4" src="R.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="5" src="R.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="6" src="R.png" onclick="mueveRana(this);">  </td>
+		</tr>
+		<tr>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+		</tr>
+	</table>
+	<button onclick="window.location.reload();"> Refrescar </button>
+	<button onclick="resuelveHardcoded();"> Resuelve </button>
+
+	<script type="text/javascript">
+
+		
+        
+
+
+		function resuelveHardcoded() {
+            setTimeout(() => { cambiaRanas(document.getElementById(2), document.getElementById(3)); }, 1000);
+			setTimeout(() => { cambiaRanas(document.getElementById(4), document.getElementById(2)); }, 2000);
+            setTimeout(() => { cambiaRanas(document.getElementById(5), document.getElementById(4)); }, 3000);
+        }
+
+		// recibe punteros a los objectos de DOM.
+		function cambiaRanas(o, d) {
+			var aux_src = o.src;
+			o.src = d.src;
+			d.src = aux_src;
+		}
+
+
+		function mueveRana(el) {
+			var idNum = parseInt(el.id, 10), el_vecino;
+
+			if (el.src.includes("L.png") && idNum < (7 - 2)) {
+				el_vecino = document.getElementById(idNum + 2);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+			if (el.src.includes("L.png") && idNum < (7 - 1)) {
+				el_vecino = document.getElementById(idNum + 1);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+
+			if (el.src.includes("R.png") && idNum > 1) {
+				el_vecino = document.getElementById(idNum - 2);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+			if (el.src.includes("R.png") && idNum > 0) {
+				el_vecino = document.getElementById(idNum - 1);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+
+
+
+
+		}
+	</script>
+</body>
+
+</html>

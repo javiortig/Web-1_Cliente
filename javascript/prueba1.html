@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Ejemplo Objeto screen</title>
+</head>
+
+<body>
+    <h2> Propiedades de mi pantalla </h2>
+    <script type="text/javascript">
+        switch (screen.colorDepth) {
+            case 1: case 4: document.bgColor = "gray"; break;
+            case 8: case 15: case 16: document.bgColor = "blue"; break;
+            case 24: case 32: document.bgColor = "lightgreen"; break;
+            default: document.bgColor = "white";
+        }
+        document.write("Su pantalla soporta color de " + screen.colorDepth + " bits.");
+        document.write(" La altura es de " + screen.height + " px,");
+        document.write(" y la anchura son " + screen.width + " px.");
+    </script>
+</body>
+
+</html>

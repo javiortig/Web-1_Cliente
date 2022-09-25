@@ -1,0 +1,137 @@
+<html>
+<head>
+	<title>Juego Ranas</title>
+
+	<style>
+        body {
+            background-color: #337f7f;
+        }
+	</style>
+
+</head>
+
+	
+<body align="center">
+	<h1>
+		Juego Ranas en HTML y
+		Java Script 5
+	</h1>
+
+	<table border="1" align="center" bordercolor="#000608">
+		<tr>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+		</tr>
+		<tr>
+			<!--
+				Los ids se usan como `array`. L viaja left, R right, B vacío.
+			-->
+			<td> <img id="0" src="L.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="1" src="L.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="2" src="L.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="3" src="B.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="4" src="R.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="5" src="R.png" onclick="mueveRana(this);">  </td>
+			<td> <img id="6" src="R.png" onclick="mueveRana(this);">  </td>
+		</tr>
+		<tr>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+			<td> <img src="E.png">  </td>
+		</tr>
+	</table>
+	<button onclick="window.location.reload();"> Refrescar </button>
+	<button onclick="resuelveHardcoded();"> Resuelve </button>
+	<button onclick="undo();"> Deshace </button>
+	
+	<p>Contador: <b id="contador">0</bid="contador"></p>
+
+	<script type="text/javascript">
+		var movUsuario = [];
+
+		function undo() {
+			var des = movUsuario.pop();
+            cambiaRanas(des[1], des[0], true)
+        }
+
+
+		function resuelveHardcoded() {
+			var moves = [3, 2, 4, 5, 3, 1, 0, 2, 4, 6, 5, 3, 1, 2, 4, 3];
+
+			for (let i = 0; i < moves.length - 1; i++) {
+				//setTimeout(() => { cambiaRanas(document.getElementById(moves[i]), document.getElementById(moves[i + 1])); }, 1000 * i);
+				setTimeout(() => { mueveRana(document.getElementById(moves[i])); }, 1000 * i);
+			}
+			//
+		}
+
+		// recibe punteros a los objectos de DOM.
+		// Las mueve fisicamente
+		function cambiaRanas(o, d, undo=false) {
+			var aux_src = o.src;
+			o.src = d.src;
+			d.src = aux_src;
+
+			if (undo) {
+                document.getElementById("contador").innerHTML = parseInt(document.getElementById("contador").innerHTML) - 1
+			} else {
+                document.getElementById("contador").innerHTML = parseInt(document.getElementById("contador").innerHTML) + 1
+                movUsuario.push([o, d]);
+            }
+
+
+		}
+
+
+		//La funcion de la logica del movimiento, que llama a cambiaRanas()
+		function mueveRana(el) {
+			var idNum = parseInt(el.id, 10);
+			var el_vecino;
+
+			if (el.src.includes("L.png") && idNum < (7 - 2)) {
+				el_vecino = document.getElementById(idNum + 2);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+			if (el.src.includes("L.png") && idNum < (7 - 1)) {
+				el_vecino = document.getElementById(idNum + 1);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+			
+			if (el.src.includes("R.png") && idNum > 1) {
+				el_vecino = document.getElementById(idNum - 2);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+			if (el.src.includes("R.png") && idNum > 0) {
+				el_vecino = document.getElementById(idNum - 1);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+
+
+
+
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Repaso Juego Ranas</title>
+    <style>
+        body {
+            background-color: #337f7f;
+        }
+    </style>
+</head>
+
+<body align="center">
+    <h1> Juego Ranas en HTML y Java Script 5 </h1>
+    <table border="1" align="center" bordercolor="#000608">
+        <tr>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+        </tr>
+        <tr>
+            <td> <img id="0" src="L.png" onclick="mueveRana(this)">  </td>
+            <td> <img id="1" src="L.png" onclick="mueveRana(this)">  </td>
+            <td> <img id="2" src="L.png" onclick="mueveRana(this)">  </td>
+            <td> <img id="3" src="B.png" onclick="mueveRana(this)">  </td>
+            <td> <img id="4" src="R.png" onclick="mueveRana(this)">  </td>
+            <td> <img id="5" src="R.png" onclick="mueveRana(this)">  </td>
+            <td> <img id="6" src="R.png" onclick="mueveRana(this)">  </td>
+        </tr>
+        <tr>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+            <td> <img src="E.png">  </td>
+        </tr>
+    </table>
+    <button onclick="window.location.reload();">Refrescar</button>
+    <!-- TODO ESTOS DOS BOTONES-->
+    <button onclick="resuelve(this);">Resuelve</button>
+    <button id="undo" onclick="undo();">Undo</button>
+    <p>Contador: <b id="contador">0</b></p>
+
+    <script type="text/javascript">
+        const DELAY_SOLVING_MS = 1000;
+        var movimientos_user = []
+
+        function undo() {
+            if (movimientos_user.length <= 0){
+                return;
+            }
+
+			var des = movimientos_user.pop();
+            cambiaRanas(des[1], des[0], true)
+        }
+        
+        // recibe punteros a los objectos de DOM.
+		// Las mueve fisicamente
+		function cambiaRanas(o, d, undo = false) {
+            var aux;
+
+            // las muevo
+            aux = d.src;
+            d.src = o.src;
+            o.src = aux;
+
+            //modifica el contador
+            if(undo){
+                document.getElementById("contador").innerHTML = parseInt(document.getElementById("contador").innerHTML) - 1;
+            }
+            else{
+                document.getElementById("contador").innerHTML = parseInt(document.getElementById("contador").innerHTML) + 1;
+                movimientos_user.push([d, o]);
+            }
+		}
+
+        // Funcion logica de la rana. La mueve fisicamente con cambiaRanas()
+        //vecino_a distancia 1, vecino_b distancia 2
+        function mueveRana(el){
+            var vecino_a, vecino_b;
+            var el_id = parseInt(el.id);
+
+            if(el.src.includes("L.png")){
+
+                if (el_id == 5){
+                    vecino_a = document.getElementById(el_id + 1);
+
+                    if (vecino_a.src.includes("B.png")){
+                        cambiaRanas(el, vecino_a);
+                    }
+                }
+                else if(el_id< 5){
+                    vecino_a = document.getElementById(el_id + 1);
+                    vecino_b = document.getElementById(el_id + 2);
+
+
+                    if (vecino_a.src.includes("B.png")){
+                        cambiaRanas(el, vecino_a);
+                    }
+                    else if (vecino_b.src.includes("B.png")){
+                        cambiaRanas(el, vecino_b);
+                    }
+                }
+                
+            }
+            else if (el.src.includes("R.png")){
+                if (el_id == 1){
+                    vecino_a = document.getElementById(el_id - 1);
+
+                    if (vecino_a.src.includes("B.png")){
+                        cambiaRanas(el, vecino_a);
+                    }
+                }
+                else if(el_id> 1){
+                    vecino_a = document.getElementById(el_id - 1);
+                    vecino_b = document.getElementById(el_id - 2);
+
+
+                    if (vecino_a.src.includes("B.png")){
+                        cambiaRanas(el, vecino_a);
+                    }
+                    else if (vecino_b.src.includes("B.png")){
+                        cambiaRanas(el, vecino_b);
+                    }
+                }
+            }
+        }
+
+        function resuelve(el){
+            var moves = [3, 2, 4, 5, 3, 1, 0, 2, 4, 6, 5, 3, 1, 2, 4, 3];
+            var i= parseInt(document.getElementById("contador").innerHTML);
+
+            el.style.visibility = "hidden";
+            document.getElementById("undo").style.visibility = "hidden";
+
+            var solver = setInterval(function(){ 
+                if (i < moves.length){
+                    mueveRana(document.getElementById(moves[i])); 
+                    i++;
+                }
+                else{
+                    clearInterval(solver);
+                }
+                
+            }, DELAY_SOLVING_MS)
+        }
+
+    </script>
+</body>
+
+</html>
