@@ -1,0 +1,284 @@
+<html>
+
+<head>
+	<title>Juego Ranas</title>
+
+	<style>
+		body {
+			background-color: #337f7f;
+		}
+	</style>
+
+</head>
+
+
+<body align="center">
+	<h1>
+		Juego Ranas en HTML y
+		Java Script 1
+	</h1>
+
+	<table border="1" align="center" bordercolor="#000608">
+		<tr>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+		</tr>
+		<tr>
+			<td> <img id="0" src="L.png" onclick="mueveRana(this);"> </td>
+			<td> <img id="1" src="L.png" onclick="mueveRana(this);"> </td>
+			<td> <img id="2" src="L.png" onclick="mueveRana(this);"> </td>
+			<td> <img id="3" src="B.png" onclick="mueveRana(this);"> </td>
+			<td> <img id="4" src="R.png" onclick="mueveRana(this);"> </td>
+			<td> <img id="5" src="R.png" onclick="mueveRana(this);"> </td>
+			<td> <img id="6" src="R.png" onclick="mueveRana(this);"> </td>
+		</tr>
+		<tr>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+			<td> <img src="E.png"> </td>
+		</tr>
+	</table>
+	<button onclick="window.location.reload();"> Refrescar </button>
+	<button id="resuelveHardcoded" onclick="resuelveHardcoded();"> Resuelve </button>
+	<button id="undo_id" onclick="undo();"> Deshace </button>
+	<button onclick="randomize();hasWon = false;"> Aleatoriza </button>
+	<button onclick="hasSolution(true);"> checkLost </button>
+	<button onclick="checkCenterStucked(true);"> Test </button>
+	<!--trazas-->
+
+
+	<div>Contador: <p id="contador">0</p>
+	</div>
+	<div>
+		<p id="msg"></p>
+	</div>
+
+	<script type="text/javascript">
+		var movUsuario = [];
+		var hasWon = false;
+
+		// Comprueba si está atascado en un caso especial donde 
+		// no hay solucion y la pierda está en el centro.
+		// Basicamente si el tablero es simétrico pero no ha ganado, no tiene solución
+		//TODO: es incompleto. Debe comprobar todos los casos con la piedra en el centro
+		function checkCenterStucked(){
+			elements = document.getElementsByTagName("table")[0].rows[1].getElementsByTagName("img");
+			
+			if (hasWon) {
+				return false;
+			}
+
+			if (checkStart()){
+				return false;
+			}
+
+			if(elements[3].src.includes("B.png") &&
+				(elements[0].src != elements[6].src) && 
+				(elements[1].src != elements[5].src) && 
+				(elements[2].src != elements[4].src))
+			{
+				console.log("Caso simetrico");
+
+				return true;	
+			}
+
+			return false;
+		}
+
+		//Chequea si el board se va a poder resolver o no
+		function hasSolution(alertFlag = false) {
+			let rock_pos = -1;
+
+			// Si ya ha ganado nos interesea decir que no tiene solucion 
+			// para el randomize
+			if (hasWon) {
+				if (alertFlag) {
+					alert("Ya has ganado");
+				}
+				return false;
+			}
+
+			//Comprueba casos simetricos
+			if (checkCenterStucked()){
+				return false;
+			}
+
+			// Busca la pos de la roca
+			for (let i = 0; i < 7; i++) {
+				if (document.getElementById(i).src.includes("B.png")) {
+					rock_pos = i;
+					break;
+				}
+			}
+
+			// chequea si 2 adyacentes tienen el rock detras, que significa
+			// que han perdido
+			for (let i = 0; i < 6; i++) {
+				a = document.getElementById(i);
+				b = document.getElementById(i + 1);
+
+				if (a.src.includes("L.png") && b.src.includes("L.png") && i < 5) {
+					// Caso extraordinario
+					if (!(i == 4 && document.getElementById("6").src.includes("L.png"))) {
+						if (rock_pos < i) {
+							if (alertFlag) {
+								alert("Sin solución " + i);
+							}
+
+							return false;
+						}
+					}
+
+				}
+				else if (a.src.includes("R.png") && b.src.includes("R.png") && i > 0) {
+					// Caso extraordinario
+					if (!(i == 1 && document.getElementById("0").src.includes("R.png"))) {
+						if (rock_pos > i + 1) {
+							if (alertFlag) {
+								alert("Sin solución " + i);
+							}
+							return false;
+						}
+					}
+				}
+
+			}
+			if (alertFlag) {
+				alert("Sigues jugando");
+			}
+
+			return true;
+		}
+
+		function checkWin() {
+			var correctos = document.getElementById("0").src.includes("R.png") +
+				document.getElementById("1").src.includes("R.png") +
+				document.getElementById("2").src.includes("R.png") +
+				document.getElementById("3").src.includes("B.png");
+			if (correctos == 4) {
+				//setTimeout(() => { alert("You won! Has ganado!");}, 1);
+				hasWon = true;
+				document.getElementById("msg").innerHTML = "You won! Has ganado!";
+			}
+		}
+
+		function checkStart() {
+			var correctos = document.getElementById("0").src.includes("L.png") +
+				document.getElementById("1").src.includes("L.png") +
+				document.getElementById("2").src.includes("L.png") +
+				document.getElementById("3").src.includes("B.png");
+			if (correctos == 4) {
+				return true;
+			}
+
+			return false;
+		}
+
+
+		function randomize() {
+			//alert("randomize");
+			for (let i = 0; i < 7; i++) {
+				cambiaRanas(document.getElementById(i),
+					document.getElementById(Math.floor(Math.random() * 7)));
+			}
+			movUsuario = [];
+			document.getElementById("contador").innerHTML = 0;
+			//document.getElementById("undo_id").disabled = true;
+			document.getElementById("msg").innerHTML = "";
+
+			// Aleatoriza hasta que de un tablero con solucion
+			// if(!hasSolution()){
+			// 	randomize();
+			// }
+		}
+
+
+		function undo() {
+			if (movUsuario.length > 0) {
+				var des = movUsuario.pop();
+				cambiaRanas(des[1], des[0], true);
+				if (movUsuario.length == 0) {
+					document.getElementById("resuelveHardcoded").disabled = false;
+				}
+			}
+			document.getElementById("msg").innerHTML = "";
+		}
+
+
+		function resuelveHardcoded() {
+			var moves = [3, 2, 4, 5, 3, 1, 0, 2, 4, 6, 5, 3, 1, 2, 4, 3];
+
+
+
+			for (let i = 0; i < moves.length; i++) {
+				//setTimeout(() => { cambiaRanas(document.getElementById(moves[i]), document.getElementById(moves[i + 1])); }, 1000 * i);
+				setTimeout(() => { mueveRana(document.getElementById(moves[i])); }, 1000 * i);
+			}
+			//
+		}
+
+		// recibe punteros a los objectos de DOM.
+		function cambiaRanas(o, d, param_undo = false) {
+			var aux_src = o.src;
+			o.src = d.src;
+			d.src = aux_src;
+
+			if (param_undo) {
+				document.getElementById("contador").innerHTML = parseInt(document.getElementById("contador").innerHTML) - 1
+			} else {
+				document.getElementById("contador").innerHTML = parseInt(document.getElementById("contador").innerHTML) + 1
+				movUsuario.push([o, d]);
+			}
+
+			document.getElementById("resuelveHardcoded").disabled = true;
+			checkWin();
+		}
+
+
+		function mueveRana(el) {
+			var idNum = parseInt(el.id, 10), el_vecino;
+
+			if (el.src.includes("L.png") && idNum < (7 - 2)) {
+				el_vecino = document.getElementById(idNum + 2);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+			if (el.src.includes("L.png") && idNum < (7 - 1)) {
+				el_vecino = document.getElementById(idNum + 1);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+
+			if (el.src.includes("R.png") && idNum > 1) {
+				el_vecino = document.getElementById(idNum - 2);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+			if (el.src.includes("R.png") && idNum > 0) {
+				el_vecino = document.getElementById(idNum - 1);
+				if (el_vecino.src.includes("B.png")) {
+					cambiaRanas(el, el_vecino);
+				}
+			}
+
+
+		}
+	</script>
+</body>
+
+</html>
