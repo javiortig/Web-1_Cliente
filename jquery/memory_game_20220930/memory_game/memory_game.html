@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Memory Game </title>
+    <style>
+        body {
+            background-color: #337f7f;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    </style>
+    <h1 align="center"> Memory Game </h1>
+    <table border="1" align="center">
+        <tr>
+            <td> <img class="carta" name="none2.png" src="bottle.png" width=200 onclick="swapImage(this);"  /></td>
+            <td> <img class="carta" name="none2.png"  src="cherrypy.png" width=200 onclick="swapImage(this);"  /></td>
+            <td> <img class="carta" name="none2.png"  src="django.png" width=200 onclick="swapImage(this);"  /></td>
+            <td> <img class="carta" name="none2.png"  src="scikitlearn.png" width=200 onclick="swapImage(this);"  /></td>
+        </tr>
+        <tr>
+            <td> <img class="carta" name="none2.png"  src="numpy.png" width=200 onclick="swapImage(this);"  /></td>
+            <td> <img class="carta" name="none2.png"  src="pandas.png" width=200 onclick="swapImage(this);"  /></td>
+            <td> <img class="carta" name="none2.png"  src="scipy.png" width=200 onclick="swapImage(this);"  /></td>
+            <td> <img class="carta" name="none2.png"  src="tensorflow.png" width=200 onclick="swapImage(this);"  /></td>
+        </tr>       
+        <tr>        
+            <td> <img class="carta" name="none2.png"  src="bottle.png" width=200 onclick="swapImage(this);"  /></td>
+            <td> <img class="carta" name="none2.png"  src="cherrypy.png" width=200 onclick="swapImage(this);"  /></td>
+            <td> <img class="carta" name="none2.png"  src="django.png" width=200 onclick="swapImage(this);"  /></td>
+            <td> <img class="carta" name="none2.png"  src="scikitlearn.png" width=200 onclick="swapImage(this);"  /></td>
+        </tr>
+        <tr>
+            <td> <img class="carta" name="none2.png" src="numpy.png" width=200 onclick="swapImage(this);"  /></td>
+            <td> <img class="carta" name="none2.png" src="pandas.png" width=200 onclick="swapImage(this);"   /></td>
+            <td> <img class="carta" name="none2.png" src="scipy.png" width=200 onclick="swapImage(this);"   /></td>
+            <td> <img class="carta" name="none2.png" src="tensorflow.png" width=200 onclick="swapImage(this);"   /></td>
+        </tr>
+    </table>
+    <div class="container">
+        <button onclick="clickAll();">Swap</button>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function clickAll(){
+            $(".carta").click();
+        }
+        
+    </script>
+    <script>
+        function swapImage(el) {
+            var aux = el.src;
+            el.src = el.name;
+            el.name = aux;
+        }
+    </script>
+
+</body>
+</html>
