@@ -1,0 +1,308 @@
+<html>
+
+<head>
+    <title>Juego chinos</title>
+
+    <!-- <style>
+		body {
+			background-color: #337f7f;
+		}
+	</style> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body align="center">
+    <h1>Juguemos a los chinos</h1>
+    <h2>Modo de juego solo 2 jugadores</h2>
+    <table class="box" align="center">
+        <tr>
+            <td id="player1" align="center" class="box">
+                <p>player1</p>
+                <img id="imagen1" class="imagen" src="./imagenes/fist.png" width="200" height="200">
+                <div>Apuesta: <b id="contadorApuesta1">0</b></div>
+                <div>Contador: <b id="contadorPuntos1">0</b></div>
+                <img id="medalla1" class="medalla" src="./imagenes/medal.png" width="100" height="100">
+            </td>
+            <td id="maquina2" align="center" class="box">
+                <p>Maquina</p>
+                <img id="iamgen2" class="imagen" src="./imagenes/fist.png" width="200" height="200">
+                <div>Apuesta: <b id="contadorApuesta2">0</b></div>
+                <div>Contador: <b id="contadorPuntos2">0</b></div>
+                <img id="medalla2" class="medalla" src="./imagenes/medal.png" width="100" height="100">
+            </td>
+            <td id="maquina3" align="center" class="box maquinaExtra">
+                <p>Maquina</p>
+                <img id="iamgen3" class="imagen" src="./imagenes/fist.png" width="200" height="200">
+                <div>Apuesta: <b id="contadorApuesta3">0</b></div>
+                <div>Contador: <b id="contadorPuntos3">0</b></div>
+                <img id="medalla3" class="medalla" src="./imagenes/medal.png" width="100" height="100">
+            </td>
+            <td id="maquina4" align="center" class="box maquinaExtra">
+                <p>Maquina</p>
+                <img id="iamgen4" class="imagen" src="./imagenes/fist.png" width="200" height="200">
+                <div>Apuesta: <b id="contadorApuesta4">0</b></div>
+                <div>Contador: <b id="contadorPuntos4">0</b></div>
+                <img id="medalla4" class="medalla" src="./imagenes/medal.png" width="100" height="100">
+            </td>
+            <td id="maquina5" align="center" class="box maquinaExtra">
+                <p>Maquina</p>
+                <img id="iamgen5" class="imagen" src="./imagenes/fist.png" width="200" height="200">
+                <div>Apuesta: <b id="contadorApuesta5">0</b></div>
+                <div>Contador: <b id="contadorPuntos5">0</b></div>
+                <img id="medalla5" class="medalla" src="./imagenes/medal.png" width="100" height="100">
+            </td>
+            <td id="maquina6" align="center" class="box maquinaExtra">
+                <p>Maquina</p>
+                <img id="iamgen6" class="imagen" src="./imagenes/fist.png" width="200" height="200">
+                <div>Apuesta: <b id="contadorApuesta6">0</b></div>
+                <div>Contador: <b id="contadorPuntos6">0</b></div>
+                <img id="medalla6" class="medalla" src="./imagenes/medal.png" width="100" height="100">
+            </td>
+
+        </tr>
+
+    </table>
+
+    <div class="box">
+            Llevo: <input id="inputLlevo" min="0" max="3" value="0" type="number">
+            Apuesto: <input id="inputApuesto" min="0" max="6" value="0" type="number">
+            <button id="botonApuesto">Apostar</button>
+            <button disabled="true" id="botonAbrir">Abrir y ver ganador</button>
+            <button disabled="true" id="botonOtraPartida">Otra partida</button>
+    </div>
+
+    <div class="box">
+        <button id="botonAnadirNPC">Añadir NPC</button>
+        <button id="botonEliminarNPC">Eliminar NPC</button>
+    </div>
+    <script>
+        /*
+            Todas estas funciones se podrían meter dentro de $(document).ready(function(){}
+            si hay que esperar algo
+        */
+        const MAX_BETS = 3;
+        const MAX_JUGADORES = 6;
+        const MIN_JUGADORES = 2;
+        const INC_DELAY = 1500;
+
+        var numJugadores = 2;
+        var jugadodrQueEmpieza = 0;
+        var delayEntreTurnos = 4000;
+
+        var apuestasHechas = [-1, -1];
+        var chinosLlevados = [-1, -1];
+
+        // $(document).ready(function(){
+        //     $(".medalla").hide(); //esto oculta por completo el html. No es lo mismo que style.visibility
+        //     $(".imagen").attr("src", "./imagenes/fist.png")
+        // });
+
+ 
+        // $("#inputLlevo").change(function () {
+        //     let direccion = this.defaultValue < this.value //mira si se pulsa arriba o abajo
+        //     this.defaultValue = this.value;
+
+            // if (direccion) alert("increase!");
+            // else alert("decrease!");
+            
+            // if(this.value > MAX_BETS){
+            //     $(this).val(MAX_BETS);
+            // }
+            // else if (this.value < 0){
+            //     $(this).val(0);
+            // }
+            
+        //});
+
+
+        function mostrarManos(){
+            $(".imagen").each((i, value) =>{
+                if(i >= numJugadores) return;
+
+                //console.log(i);
+                let lleva = chinosLlevados[i].toString();
+
+                switch (lleva) {
+                case "0":
+                    $(value).attr("src", "./imagenes/hand.png");
+                    break;
+                case "1":
+                    $(value).attr("src", "./imagenes/hand1.png");
+                    break;
+                case "2":
+                    $(value).attr("src", "./imagenes/hand2.png");
+                    break;
+                case "3":
+                    $(value).attr("src", "./imagenes/hand3.png");
+                    break;
+            
+                default:
+                    break;
+                }
+
+            });
+        }
+
+        function ocultarManos(){
+            $(".imagen").each(function(i, value){
+                $(value).attr("src", "./imagenes/fist.png");
+
+            });
+        }
+
+        //Apostar
+        $("#botonApuesto").click(function(){
+            let valorApuesta = $("#inputApuesto").val();
+            let valorLlevo = $("#inputLlevo").val();
+
+            apuestasHechas[0]= parseInt(valorApuesta);
+            chinosLlevados[0] = parseInt(valorLlevo);
+
+            $("#contadorApuesta1").text(valorApuesta);
+
+            //permite usar los botones de ver apuestas o reset
+            $("button").prop("disabled",false);
+            $("#botonAnadirNPC").prop("disabled",true);
+            $("#botonEliminarNPC").prop("disabled",true);
+        });
+
+        function mostrarApuestas(){
+            for (let i = 0; i < apuestasHechas.length; i++) {
+                $("#contadorApuesta" + (i + 1).toString()).text(apuestasHechas[i]);
+            }
+        }
+
+        function gestionarMaquina(indiceMaquina){
+            //elige apuesta y lo que lleva random de forma lógica. Lo repite hasta elegir una distinta
+            let lleva, apuesta;
+
+            do{
+                lleva = Math.floor(Math.random() * 4);
+                apuesta = Math.floor(Math.random() * (numJugadores-1) * 4)+lleva;
+
+                //comprueba si el numero esta en el array o que la apuesta sea mayor que el max logico
+            }while((apuestasHechas.indexOf(apuesta) >= 0) || (apuesta > numJugadores*3 )); 
+  
+            //asigna el valor al array
+            chinosLlevados[indiceMaquina - 1] = lleva;
+            apuestasHechas[indiceMaquina - 1] = apuesta;
+            
+        }
+
+        function gestionarGanador(){
+            let sumaGanadora = chinosLlevados.reduce(function (x, y) {
+                    return x + y;
+                }, 0);
+
+
+            for (let i = 0; i < apuestasHechas.length; i++) {
+                if(apuestasHechas[i] == sumaGanadora){
+                    //ganador encontrado, mostrar medalla ganadora
+                    // y sumarle al contador
+                    $("#medalla" + (i + 1).toString()).css("visibility", "visible");
+                    $("#contadorPuntos" + (i + 1).toString()).text(parseInt($("#contadorPuntos" + (i + 1).toString()).text()) + 1);
+                }
+            }
+        }
+
+        function reiniciarTurnos(){
+
+            for (let i = 0; i < apuestasHechas.length; i++) {
+                apuestasHechas[i] = -1;
+            }
+
+            for (let i = 0; i < chinosLlevados.length; i++) {
+                chinosLlevados[i] = -1;
+            }
+
+            for (let i = 0; i < numJugadores; i++) {
+                $("#contadorApuesta" + (i + 1).toString()).text(0);
+            }
+
+            //oculta medallas y manos
+            $(".medalla").css("visibility", "hidden");
+            $(".imagen").attr("src", "./imagenes/fist.png")
+
+            $("#botonApuesto").prop("disabled", false);
+            $("#botonAnadirNPC").prop("disabled",false);
+            $("#botonEliminarNPC").prop("disabled",false);
+            $("#botonOtraPartida").prop("disabled",false);
+        }
+
+        //Los botones también se pueden hacer con $(selector).on("click", () =>{});
+        $("#botonOtraPartida").click(() => {
+            $("button").prop("disabled",false);
+            $("#botonOtraPartida").prop("disabled",true);
+            $("#botonAbrir").prop("disabled",true);
+
+            //reinicia los contadores a 0
+            for (let i = 0; i < apuestasHechas.length; i++) {
+                apuestasHechas[i] = -1;
+            }
+
+            for (let i = 0; i < chinosLlevados.length; i++) {
+                chinosLlevados[i] = -1;
+            }
+
+            for (let i = 0; i < numJugadores; i++) {
+                $("#contadorApuesta" + (i + 1).toString()).text(0);
+            }
+            
+            for (let i = 0; i < numJugadores; i++) {
+                $("#contadorPuntos" + (i + 1).toString()).text(0);
+            }
+            
+        });
+
+        //El boton para finalizar la ronda
+        $("#botonAbrir").click(function(){
+            $("button").prop("disabled",true);
+
+            let valorApuesta = $("#inputApuesto").val();
+            let valorLlevo = $("#inputLlevo").val();
+            //ciclo de vida principal del juego
+            for (let i = 2; i <= numJugadores; i++) {
+                gestionarMaquina(i);
+            }
+            
+            mostrarApuestas()
+            mostrarManos();   
+            gestionarGanador();
+            setTimeout(reiniciarTurnos, delayEntreTurnos);     
+        });
+
+        $("#botonAnadirNPC").click(() => {
+            if(numJugadores >= MAX_JUGADORES) return -1;
+
+            numJugadores++;  
+            delayEntreTurnos += INC_DELAY;
+
+            $("#maquina" + numJugadores.toString()).css("display", "revert");
+
+            chinosLlevados.push(-1);
+            apuestasHechas.push(-1);
+
+            
+            return 0;
+        });
+
+        $("#botonEliminarNPC").click(() => {
+            if(numJugadores <= MIN_JUGADORES) return -1;  
+
+            $("#maquina" + numJugadores.toString()).css("display", "none");
+
+            numJugadores--;
+            delayEntreTurnos -= INC_DELAY;
+
+            chinosLlevados.pop();
+            apuestasHechas.pop();
+
+            return 0;
+        });
+
+        
+    </script>
+</body>
+
+</html>

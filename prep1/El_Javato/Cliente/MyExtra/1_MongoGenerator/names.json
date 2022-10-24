@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "Nombre": "Telefono",
+      "precio": 1000
+    },
+    {
+      "Nombre": "Ordenador",
+      "precio": 1500
+    },
+    {
+      "Nombre": "Cargador Ordenador",
+      "precio": 60
+    },
+    {
+      "Nombre": "Cargador telefono",
+      "precio": 12
+    },
+    {
+      "Nombre": "Telefono",
+      "precio": 1200
+    },
+    {
+      "Nombre": "Teclado",
+      "precio": 80
+    },
+    {
+      "Nombre": "Raton",
+      "precio": 90
+    },
+    {
+      "Nombre": "Alfombrilla Raton",
+      "precio": 14
+    },
+    {
+      "Nombre": "Tablet",
+      "precio": 899
+    },
+    {
+      "Nombre": "Tablet",
+      "precio": 998
+    },
+    {
+      "Nombre": "Monitor",
+      "precio": 255
+    },
+    {
+      "Nombre": "Mochila",
+      "precio": 79
+    },
+    {
+      "Nombre": "Mochila",
+      "precio": 79
+    },
+    {
+      "Nombre": "Hub USB",
+      "precio": 18
+    },
+    {
+      "Nombre": "Hub USB",
+      "precio": 28
+    }
+  ]
+}

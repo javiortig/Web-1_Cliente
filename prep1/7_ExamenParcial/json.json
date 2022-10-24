@@ -1,0 +1,1600 @@
+{
+  "created": "2020-11-11T09:26:57.508Z",
+  "count": 5508,
+  "offset": 0,
+  "artists": [
+    {
+      "id": "e95755b4-53d8-4dcd-9819-a64f0d6e1c78",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 100,
+      "name": "Lisa Dillan",
+      "sort-name": "Dillan, Lisa",
+      "gender": "female",
+      "country": "NO",
+      "area": {
+        "id": "6743d351-6f37-3049-9724-5041161fff4d",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Norway",
+        "sort-name": "Norway",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "d2c3b270-91e1-482a-a652-5c47c69a04f2",
+        "type": "Municipality",
+        "type-id": "17246454-5ac4-36a1-b81a-4753eb2dab20",
+        "name": "Bodø",
+        "sort-name": "Bodø",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "life-span": {
+        "begin": "1969",
+        "ended": null
+      }
+    },
+    {
+      "id": "aecc839d-2aed-4d92-a3ae-006c29f0a95f",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 99,
+      "name": "Dillan Witherow",
+      "sort-name": "Witherow, Dillan",
+      "gender": "male",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "b0ea071d-f818-4bdd-b3e3-fd6229253db4",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 99,
+      "name": "Ida Dillan",
+      "sort-name": "Dillan, Ida",
+      "gender": "female",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "681d859f-7caa-4e5a-9287-748ad71a350c",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 98,
+      "name": "Dillan Stephenson",
+      "sort-name": "Stephenson, Dillan",
+      "gender": "male",
+      "area": {
+        "id": "5ee8391d-418c-48ca-928a-d98d872eb95e",
+        "type": "Subdivision",
+        "type-id": "fd3d44c5-80a1-3842-9745-2c4972d35afa",
+        "name": "Barnsley",
+        "sort-name": "Barnsley",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "5ee8391d-418c-48ca-928a-d98d872eb95e",
+        "type": "Subdivision",
+        "type-id": "fd3d44c5-80a1-3842-9745-2c4972d35afa",
+        "name": "Barnsley",
+        "sort-name": "Barnsley",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "life-span": {
+        "begin": "1999-06-08",
+        "ended": null
+      }
+    },
+    {
+      "id": "10f5deee-4b18-4854-8749-5469b7370114",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 98,
+      "name": "Zack Dillan",
+      "sort-name": "Dillan, Zack",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "b1bdfbf5-6f45-4ffe-a8f1-d68b2d13a303",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 98,
+      "name": "Dillan Lazzareschi",
+      "sort-name": "Lazzareschi, Dillan",
+      "gender": "male",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "f8ca0444-1f6e-4a54-be30-31153cae8b6c",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 93,
+      "name": "Dylan Willemsa",
+      "sort-name": "Willemsa, Dylan",
+      "life-span": {
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Dillan Willemsa",
+          "name": "Dillan Willemsa",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ]
+    },
+    {
+      "id": "ed2ac1e9-d51d-4eff-a2c2-85e81abd6360",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 90,
+      "name": "Bob Marley",
+      "sort-name": "Marley, Bob",
+      "gender": "male",
+      "country": "JM",
+      "area": {
+        "id": "2dd47a64-91d5-3b13-bc94-80043ed063d7",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Jamaica",
+        "sort-name": "Jamaica",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "13d6bad5-1dbb-4d9e-bd2a-70c8e204db81",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Nine Mile",
+        "sort-name": "Nine Mile",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "end-area": {
+        "id": "4a9aeb42-3763-4234-8fb8-1167ac1dfdfe",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Miami",
+        "sort-name": "Miami",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Jamaican reggae artist",
+      "ipis": [
+        "00019675460",
+        "00034755283",
+        "00581446340"
+      ],
+      "isnis": [
+        "0000000122768131"
+      ],
+      "life-span": {
+        "begin": "1945-02-06",
+        "end": "1981-05-11",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "Martell, Bobby",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Bobby Martell",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Marley, Robert N.",
+          "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+          "name": "Robert N. Marley",
+          "locale": "en",
+          "type": "Legal name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Marley, Robert Nesta",
+          "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+          "name": "Robert Nesta Marley",
+          "locale": "en",
+          "type": "Legal name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Marley, Bob",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Bob Marley",
+          "locale": "en",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 2,
+          "name": "soul and reggae"
+        },
+        {
+          "count": 3,
+          "name": "jamaican"
+        },
+        {
+          "count": 2,
+          "name": "the wailers"
+        },
+        {
+          "count": 3,
+          "name": "singer-songwriter"
+        },
+        {
+          "count": 2,
+          "name": "roots reggae"
+        },
+        {
+          "count": 0,
+          "name": "bob-marley"
+        },
+        {
+          "count": 9,
+          "name": "reggae"
+        }
+      ]
+    },
+    {
+      "id": "72c536dc-7137-4477-a521-567eeb840fa8",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 89,
+      "name": "Bob Dylan",
+      "sort-name": "Dylan, Bob",
+      "gender": "male",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "04e60741-b1ae-4078-80bb-ffe8ae643ea7",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Duluth",
+        "sort-name": "Duluth",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "ipis": [
+        "00008955074",
+        "00008955172"
+      ],
+      "isnis": [
+        "0000000121479733"
+      ],
+      "life-span": {
+        "begin": "1941-05-24",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Robert Zimmerman",
+          "name": "Robert Zimmerman",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Zimmerman, Robert Allen",
+          "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+          "name": "Robert Allen Zimmerman",
+          "locale": null,
+          "type": "Legal name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Dylan",
+          "name": "Dylan",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Jack Frost",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Jack Frost",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Robert Dylan",
+          "name": "Robert Dylan",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "DYLYN Bob",
+          "name": "DYLYN Bob",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Wilbury, Boo",
+          "name": "Boo Wilbury",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": "1990",
+          "end-date": "1990"
+        },
+        {
+          "sort-name": "Boy Dylan",
+          "name": "Boy Dylan",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bobby Zimmerman",
+          "name": "Bobby Zimmerman",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Wilbury, Lucky",
+          "name": "Lucky Wilbury",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": "1988",
+          "end-date": "1988"
+        },
+        {
+          "sort-name": "Дилан, Боб",
+          "name": "Боб Дилан",
+          "locale": "ru",
+          "type": null,
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Dylan, Bob",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Bob Dylan",
+          "locale": "en",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Grunt, Blind Boy",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Blind Boy Grunt",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": "1962",
+          "end-date": "1963"
+        },
+        {
+          "sort-name": "Bob D",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Bob D",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 5,
+          "name": "rock"
+        },
+        {
+          "count": 4,
+          "name": "folk"
+        },
+        {
+          "count": 1,
+          "name": "american"
+        },
+        {
+          "count": 2,
+          "name": "blues"
+        },
+        {
+          "count": 2,
+          "name": "singer-songwriter"
+        },
+        {
+          "count": 1,
+          "name": "country"
+        },
+        {
+          "count": 4,
+          "name": "folk rock"
+        },
+        {
+          "count": 6,
+          "name": "blues rock"
+        },
+        {
+          "count": 3,
+          "name": "country rock"
+        },
+        {
+          "count": 1,
+          "name": "classic rock"
+        },
+        {
+          "count": 0,
+          "name": "1980s"
+        },
+        {
+          "count": 0,
+          "name": "1990s"
+        },
+        {
+          "count": 0,
+          "name": "1970s"
+        },
+        {
+          "count": 0,
+          "name": "icon"
+        },
+        {
+          "count": 0,
+          "name": "1960s"
+        },
+        {
+          "count": 0,
+          "name": "2000s"
+        },
+        {
+          "count": 3,
+          "name": "pop rock"
+        },
+        {
+          "count": 3,
+          "name": "contemporary folk"
+        },
+        {
+          "count": 0,
+          "name": "classic pop and rock"
+        },
+        {
+          "count": -1,
+          "name": "rare"
+        },
+        {
+          "count": -2,
+          "name": "siple twist of fate"
+        },
+        {
+          "count": -3,
+          "name": "1 13 165900 150 7672 22647 34612 48720 59280 74602 87545 95495 107182 131087 141522 153710"
+        },
+        {
+          "count": -2,
+          "name": "teater konsert"
+        },
+        {
+          "count": 2,
+          "name": "singer/songwriter"
+        },
+        {
+          "count": 0,
+          "name": "pop/rock"
+        },
+        {
+          "count": -3,
+          "name": "dylan bootleg series"
+        },
+        {
+          "count": -2,
+          "name": "pledging my time"
+        }
+      ]
+    },
+    {
+      "id": "08000d99-5f88-4453-bfb3-3a911938106e",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 86,
+      "name": "Dillan Beau Bailard",
+      "sort-name": "Bailard, Dillan Beau",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "94c338ff-1985-4429-9dc8-997b61bb5932",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 82,
+      "name": "B.o.B",
+      "sort-name": "B.o.B",
+      "gender": "male",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "2db9a0a5-3eb7-418a-8cd4-6a8bda9bebb3",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Winston-Salem",
+        "sort-name": "Winston-Salem",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "US rapper Bobby Ray Simmons, Jr.",
+      "ipis": [
+        "00530995927"
+      ],
+      "isnis": [
+        "0000000120532045",
+        "0000000368632090"
+      ],
+      "life-span": {
+        "begin": "1988-11-15",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "B. Simmons Jr.",
+          "name": "B. Simmons Jr.",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bobby Ray Simmons, Jr.",
+          "name": "Bobby Ray Simmons, Jr.",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "B.o.B.",
+          "name": "B.o.B.",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "BoB",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "BoB",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 4,
+          "name": "hip hop"
+        },
+        {
+          "count": 4,
+          "name": "southern hip hop"
+        },
+        {
+          "count": 2,
+          "name": "conscious hip hop"
+        },
+        {
+          "count": 2,
+          "name": "trap rap"
+        },
+        {
+          "count": 2,
+          "name": "contemporary r&b"
+        },
+        {
+          "count": 3,
+          "name": "pop rap"
+        }
+      ]
+    },
+    {
+      "id": "664725d2-c2ee-46dd-8ab2-48e1a19b14d3",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 79,
+      "name": "Bob Schneider",
+      "sort-name": "Schneider, Bob",
+      "gender": "male",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "9dcb041d-6107-45e1-a447-be986dddfde5",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Ypsilanti",
+        "sort-name": "Ypsilanti",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "former lead singer of The Ugly Americans",
+      "life-span": {
+        "begin": "1965-10-12",
+        "ended": null
+      },
+      "tags": [
+        {
+          "count": 1,
+          "name": "texas"
+        },
+        {
+          "count": 1,
+          "name": "austin"
+        }
+      ]
+    },
+    {
+      "id": "ae43e90b-b3b7-4903-8245-6ed3e3746bcb",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 78,
+      "name": "Bob Bradley",
+      "sort-name": "Bradley, Bob",
+      "gender": "male",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "ipis": [
+        "00268799883"
+      ],
+      "life-span": {
+        "begin": "1974-02-05",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Bradley, Robert Edward",
+          "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+          "name": "Robert Edward Bradley",
+          "locale": null,
+          "type": "Legal name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "media composer"
+        },
+        {
+          "count": 1,
+          "name": "production music"
+        }
+      ]
+    },
+    {
+      "id": "f9ab44f1-7b19-4ecb-830c-403abcf36cd1",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 77,
+      "name": "Bob Sinclar",
+      "sort-name": "Sinclar, Bob",
+      "gender": "male",
+      "country": "FR",
+      "area": {
+        "id": "08310658-51eb-3801-80de-5a0739207115",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "France",
+        "sort-name": "France",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "aff4b7dd-2302-4ef1-b371-06b4e8a29e64",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Douarnenez",
+        "sort-name": "Douarnenez",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "French record producer, house music DJ & remixer",
+      "ipis": [
+        "00153038004"
+      ],
+      "isnis": [
+        "0000000116791634"
+      ],
+      "life-span": {
+        "begin": "1967-05-10",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Bob Sinclair",
+          "name": "Bob Sinclair",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bon Sinclair",
+          "name": "Bon Sinclair",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bob Sinclair présente A Space Funk Project",
+          "name": "Bob Sinclair présente A Space Funk Project",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "french house"
+        },
+        {
+          "count": 1,
+          "name": "house"
+        },
+        {
+          "count": 1,
+          "name": "dance-pop"
+        },
+        {
+          "count": 1,
+          "name": "electro house"
+        },
+        {
+          "count": 0,
+          "name": "dance and electronica"
+        },
+        {
+          "count": 1,
+          "name": "hip house"
+        }
+      ]
+    },
+    {
+      "id": "c296e10c-110a-4103-9e77-47bfebb7fb2e",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 76,
+      "name": "Bob Marley & The Wailers",
+      "sort-name": "Marley, Bob & The Wailers",
+      "country": "JM",
+      "area": {
+        "id": "2dd47a64-91d5-3b13-bc94-80043ed063d7",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Jamaica",
+        "sort-name": "Jamaica",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "23e0d135-9fe7-48cb-b2c4-93addd3d1e37",
+        "type": "Subdivision",
+        "type-id": "fd3d44c5-80a1-3842-9745-2c4972d35afa",
+        "name": "Kingston",
+        "sort-name": "Kingston",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "end-area": {
+        "id": "4a9aeb42-3763-4234-8fb8-1167ac1dfdfe",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Miami",
+        "sort-name": "Miami",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "ipis": [
+        "00019675460",
+        "00034755283",
+        "00581446340"
+      ],
+      "isnis": [
+        "0000000122652083"
+      ],
+      "life-span": {
+        "begin": "1970-12",
+        "end": "1981-05-11",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "Bob Marley; The Wailers",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Bob Marley; The Wailers",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bob Marley and the Whalers",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Bob Marley and the Whalers",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bob Marley & The Wailers & I Threes",
+          "name": "Bob Marley & The Wailers & I Threes",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bob Marley and The Wailers",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Bob Marley and The Wailers",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bob Marley and",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Bob Marley and",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "ボブ・マーリー＆ザ・ウェイラーズ",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "ボブ・マーリー＆ザ・ウェイラーズ",
+          "locale": "ja",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bob Harley and the Wailers",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Bob Harley and the Wailers",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "ボブ・マーリー",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "ボブ・マーリー",
+          "locale": "ja",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": -1,
+          "name": "do not split"
+        },
+        {
+          "count": 10,
+          "name": "reggae"
+        },
+        {
+          "count": 2,
+          "name": "ska"
+        },
+        {
+          "count": 1,
+          "name": "rocksteady"
+        },
+        {
+          "count": 1,
+          "name": "jamaican ska"
+        },
+        {
+          "count": 4,
+          "name": "roots reggae"
+        },
+        {
+          "count": 0,
+          "name": "classic pop and rock"
+        },
+        {
+          "count": 1,
+          "name": "ambient dub"
+        },
+        {
+          "count": 0,
+          "name": "split or merge to “the wailers” (keeping ac)"
+        },
+        {
+          "count": 0,
+          "name": "bob-marley"
+        },
+        {
+          "count": 1,
+          "name": "soul"
+        },
+        {
+          "count": 1,
+          "name": "soul shakedown party (silk’s downunder mix)"
+        },
+        {
+          "count": 0,
+          "name": "jamaican"
+        },
+        {
+          "count": 0,
+          "name": "soul and reggae"
+        },
+        {
+          "count": 0,
+          "name": "the wailers"
+        }
+      ]
+    },
+    {
+      "id": "43990e26-f248-4b9f-966c-edcb8505c7a9",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 75,
+      "name": "Bob",
+      "sort-name": "Bob",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Twee indie from 1987, released \"Prune (Your Tree)\"",
+      "life-span": {
+        "begin": "1986",
+        "end": "1992",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "BOB",
+          "name": "BOB",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "indie rock"
+        },
+        {
+          "count": 1,
+          "name": "indie pop"
+        }
+      ]
+    },
+    {
+      "id": "2b7b1002-cbf6-4588-9cc8-32ffee81b776",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 75,
+      "name": "Bob Holroyd",
+      "sort-name": "Holroyd, Bob",
+      "gender": "male",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "life-span": {
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "B. Holroyd",
+          "name": "B. Holroyd",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "production music"
+        }
+      ]
+    },
+    {
+      "id": "f4d2fc5a-cacb-47c8-b096-ee73864b1aa8",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 74,
+      "name": "Bob James",
+      "sort-name": "James, Bob",
+      "gender": "male",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "3363a5a5-c47d-4f47-be20-589a9b541a84",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Marshall",
+        "sort-name": "Marshall",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "US jazz keyboardist, arranger and producer",
+      "ipis": [
+        "00034494089"
+      ],
+      "isnis": [
+        "0000000081611954"
+      ],
+      "life-span": {
+        "begin": "1939-12-25",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "James, Robert McElhiney",
+          "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+          "name": "Robert McElhiney James",
+          "locale": null,
+          "type": "Legal name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "James, Robert",
+          "name": "Robert James",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "James, Robert M.",
+          "name": "Robert M. James",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "jazz"
+        },
+        {
+          "count": 1,
+          "name": "jazz-funk"
+        }
+      ]
+    },
+    {
+      "id": "bee58a88-1bd0-40e7-99d0-db03cd99c8f5",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 74,
+      "name": "Bob Mitchell",
+      "sort-name": "Mitchell, Bob",
+      "gender": "male",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "UK production music composer & songwriter",
+      "ipis": [
+        "00012760513",
+        "00012760709"
+      ],
+      "life-span": {
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Mitchell Halstead, Bobby Godfrey",
+          "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+          "name": "Bobby Godfrey Mitchell Halstead",
+          "locale": null,
+          "type": "Legal name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "production music"
+        }
+      ]
+    },
+    {
+      "id": "4e3b051f-f31d-4e0e-8acd-7919ab175d19",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 73,
+      "name": "BOB",
+      "sort-name": "BOB",
+      "disambiguation": "Pop/Popmusic band",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "00e90ad4-9cde-4e86-af92-749e2475ad24",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 73,
+      "name": "Bobby Tench",
+      "sort-name": "Tench, Bobby",
+      "gender": "male",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "f03d09b3-39dc-4083-afd6-159e3f0d462f",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "London",
+        "sort-name": "London",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "classic rock vocalist, guitarist",
+      "ipis": [
+        "00089752717"
+      ],
+      "isnis": [
+        "0000000131771180"
+      ],
+      "life-span": {
+        "begin": "1944-09-21",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Bobby Gass",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Bobby Gass",
+          "locale": "en",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Robert Tench",
+          "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+          "name": "Robert Tench",
+          "locale": "en",
+          "type": "Legal name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bob Tench",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Bob Tench",
+          "locale": "en",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "british"
+        },
+        {
+          "count": 1,
+          "name": "hummingbird"
+        },
+        {
+          "count": 2,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "jeff beck"
+        },
+        {
+          "count": 1,
+          "name": "van morrison"
+        },
+        {
+          "count": 1,
+          "name": "vocals"
+        },
+        {
+          "count": 1,
+          "name": "freddie king"
+        },
+        {
+          "count": 1,
+          "name": "guitar"
+        },
+        {
+          "count": 1,
+          "name": "humble pie"
+        },
+        {
+          "count": 1,
+          "name": "the gass"
+        },
+        {
+          "count": 1,
+          "name": "blues"
+        }
+      ]
+    },
+    {
+      "id": "c727f585-54e0-4e0d-b8ad-05f216f99244",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 73,
+      "name": "Bob Wills",
+      "sort-name": "Wills, Bob",
+      "gender": "male",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "eef9a180-6224-4bb0-94f6-9e15e7162b92",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Kosse",
+        "sort-name": "Kosse",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "end-area": {
+        "id": "ae96202a-e993-45de-adfe-a8c6b66a781d",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Fort Worth",
+        "sort-name": "Fort Worth",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "ipis": [
+        "00033017527",
+        "00063707380",
+        "00063787054"
+      ],
+      "life-span": {
+        "begin": "1905-03-06",
+        "end": "1975-05-13",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "Bob Willis",
+          "name": "Bob Willis",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Wills, James Robert",
+          "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+          "name": "James Robert Wills",
+          "locale": null,
+          "type": "Legal name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ]
+    },
+    {
+      "id": "c33627c6-ef0d-49de-9ef0-c4804190040f",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 73,
+      "name": "Bob Marley",
+      "sort-name": "Marley, Bob",
+      "gender": "male",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "comedian",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "d7f5305a-15fc-4af4-a61b-f6f45510cc8f",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 73,
+      "name": "Bob Mould",
+      "sort-name": "Mould, Bob",
+      "gender": "male",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "e2da189f-29be-47d2-989f-0f4e2abc1c41",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Malone",
+        "sort-name": "Malone",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "ipis": [
+        "00202070339"
+      ],
+      "isnis": [
+        "0000000055140263"
+      ],
+      "life-span": {
+        "begin": "1960-10-16",
+        "ended": null
+      },
+      "tags": [
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "rock and indie"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        }
+      ]
+    },
+    {
+      "id": "c2b47535-cc6a-4fe3-a4ee-392a36db650f",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 72,
+      "name": "Bob Girls",
+      "sort-name": "bobgirls",
+      "country": "KR",
+      "area": {
+        "id": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "South Korea",
+        "sort-name": "South Korea",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "South Korea",
+        "sort-name": "South Korea",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "end-area": {
+        "id": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "South Korea",
+        "sort-name": "South Korea",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "South Korean girl group",
+      "life-span": {
+        "begin": "2014",
+        "end": "2015-02",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "단발머리",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Bob Girls",
+          "locale": "ko_KR",
+          "type": "Artist name",
+          "primary": true,
+          "begin-

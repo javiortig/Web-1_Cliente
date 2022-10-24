@@ -1,0 +1,14 @@
+1p ajax. conectamos a una api de ajax y cogemos un valor
+1p dejarlo bonito (ordenado, colocado...)
+
+no tiene despliegue
+
+jquery lo de la manita
+
+1 parte de hacer una cosa aleatoria. Es en un juego. Recomienda dejar fijo y aleatorizar al final
+
+animacion
+
+intentar usar jquery con selectores, el each() antes que document.getelement...
+
+para el examen https://groupc.pythonanywhere.com/formularioajax

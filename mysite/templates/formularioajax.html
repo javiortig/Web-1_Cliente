@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>AJAX Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<br><br><br><br>
+		<form class="form-inline">
+		  <div class="form-group">
+			<label class="sr-only" for="emailInput">Email</label>
+			<input type="email" class="form-control" id="emailInput" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+			<label class="sr-only" for="nameInput">Nombre</label>
+			<input type="text" class="form-control" id="nameInput" placeholder="Primero Nombre">
+		  </div>
+		  <button type="submit" class="btn btn-default">Enviar</button>
+		</form>
+		<br>
+		<div id="successAlert" class="alert alert-success" role="alert" style="">Email ok!</div>
+		<div id="errorAlert" class="alert alert-danger" role="alert" style="display: none;">B</div>
+	</div>
+
+	<script>
+	    $('form').on('submit', function(event){
+	            event.preventDefault();
+                $.ajax({
+                    data:{
+                        name:$("#nameInput").val(),
+                        email:$("#emailInput").val()
+                    },
+                    type:'POST',
+                    url:'/proceso'
+                    })
+                 .done(function(data){
+                     if(data.error){
+                         $("#errorAlert").text(data.error).show();
+                         $("#successAlert").hide();
+                     } else {
+                         $("#errorAlert").hide();
+                         $("#successAlert").text(data.name).show();
+                     }
+                 });
+	        }
+	    );
+	    $('.alert').hide();
+
+	    $(document).ready(
+	            function () {
+	                   $('#emailInput').on('focusout',function (event){
+	                       //event.preventDefault();
+	                       //alert("focusout");
+	                       $.ajax({
+	                                data:{email:$("#emailInput").val()},
+	                                type:'POST',
+	                                url:'/compruebaemail'
+	                           }).done(function(data){
+                                if(data.error){
+    	                            $('#errorAlert').html('Email ya existe').show();
+                                    $('#successAlert').hide();
+                                } else {
+	                                $('#successAlert').html('Email ok!').show();
+	                                $('#errorAlert').hide();
+                                }
+	                       });
+
+	                   });
+	            });
+
+	</script>
+
+
+</body></html>
