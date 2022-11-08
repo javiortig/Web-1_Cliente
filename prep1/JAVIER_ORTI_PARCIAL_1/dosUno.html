@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <title>Juego dosUno</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body align="center">
+    <h1>Juego de 1 o 2</h1>
+    <h2>Juego de hasta 3 jugadores:</h2>
+
+    <div class="box">
+        <label for="partidas">Partidas(P):</label>
+        <select id="selPartidas" name="partidas">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <label for="humanos">Humanos(H):</label>
+        <select id="selHumanos" name="humanos">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <button id="empezarPartida">Empezar Partida</button>
+    </div>
+
+
+    <table class="box" align="center">
+        <tr>
+            <td id="player0" align="center" class="box">
+                <p class="playerName">player1</p>
+                <img id="imagen0" class="imagen" src="./dos_o_uno_assets/cero.png" width="150" height="150">
+                <div>Contador: <b id="contadorPuntos1">0</b></div>
+                <input id="inputLlevo0" min="1" max="2" value="0" type="number">
+            </td>
+            <td id="player1" align="center" class="box">
+                <p class="playerName">player1</p>
+                <img id="imagen1" class="imagen" src="./dos_o_uno_assets/cero.png" width="150" height="150">
+                <div>Contador: <b id="contadorPuntos2">0</b></div>
+                <input id="inputLlevo1" min="1" max="2" value="0" type="number">
+            </td>
+            <td id="player2" align="center" class="box">
+                <p class="playerName">player1</p>
+                <img id="imagen2" class="imagen" src="./dos_o_uno_assets/cero.png" width="150" height="150">
+                <div>Contador: <b id="contadorPuntos3">0</b></div>
+                <input id="inputLlevo2" min="1" max="2" value="0" type="number">
+            </td>
+        </tr>
+    </table>
+
+    <div class="box">
+        <button id="reiniciarPartida">Reiniciar Partida</button>
+        <button id="verPista">Ver Pista</button>
+        <button id="mostrar">Mostrar</button>
+
+    </div>
+
+
+
+    <script>
+        var numMaquinas = -1;
+        var numHumanos = -1;
+        var numPartidas = -1;
+
+        var valores = [-1, -1, -1];
+        var isMaquina = [true, true, true];
+
+        $(document).ready(function () {
+
+            // Randomiza los nombres de los jugadores
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/users",
+                type: 'GET',
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                    $(".playerName").each((i, value) => {
+                        $(value).text(res[i].name);
+
+                    });
+                }
+            });
+        });
+
+        $("#reiniciarPartida").click(function () {
+            isMaquina = [true, true, true];
+            numMaquinas = -1;
+            numHumanos = -1;
+            numPartidas = -1;
+            valores = [-1, -1, -1];
+        });
+
+        $("#empezarPartida").click(function () {
+            numHumanos = parseInt($("#selHumanos").val());
+            numPartidas = parseInt($("#selPartidas").val());
+            numMaquinas = 3 - numHumanos;
+
+            for (let i = 0; i < numHumanos; i++) {
+                isMaquina[i] = true;
+                $("#inputLlevo" + i.toString()).prop("disabled", true);
+            }
+
+        });
+
+        $("#mostrar").click(function () {
+            let res = -1;
+            for (let i = 0; i < valores.length; i++) {
+                if (isMaquina) {
+                    res = Math.floor(Math.random() * 2) + 1;
+                }
+                else {
+                    res = parseInt($("#inputLlevo" + i.toString()).val());
+                }
+
+                valores[i] = res;
+                switch (res) {
+                    case 1:
+                        $("#inputLlevo").attr("src", "./dos_o_uno_assets/uno.png");
+                        break;
+                    case 2:
+                        $("#inputLlevo").attr("src", "./dos_o_uno_assets/uno.png");
+                        break;
+
+                    default:
+                        console.log("error");
+                        break;
+                }
+            }
+            
+            elegirGanador();
+
+        });
+
+        function elegirGanador(){
+            let counts = {};
+            valores.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
+
+            console.log(counts);
+        }
+
+    </script>
+
+</body>
+
+</html>
