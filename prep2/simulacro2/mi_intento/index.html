@@ -1,0 +1,524 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intento Simulacro 2</title>
+    <!-- CDN DE REACT-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <!-- CDN DE BOOSTRAP 5.2-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <!-- AXIOS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- RERENDER POLYFILL -->
+    <script src="https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            color: #202020;
+            font-family: 'Comfortaa', Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .codigo {
+            display: block;
+            white-space: pre-wrap;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Pylibs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#webSection">Web</a>
+                <a class="nav-item nav-link" href="#dataScienceSection">Data Science</a>
+                <a class="nav-item nav-link" href="#">Otras</a>
+            </div>
+        </div>
+    </nav>
+    <div id="webSection">
+        <div class="text-center my-4">
+            <h4>Web</h4>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="w0" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal1"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="w1" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal2"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="w2" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal3"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="w3" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal4"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="w4" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal5"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="w5" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal6"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="w6" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal1"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="w7" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal1"></div>
+        </div>
+    </div>
+
+    <div id="dataScienceSection">
+        <div class="text-center my-4">
+            <h4>Data Science</h4>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="d0" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal7"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="d1" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal8"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="d2" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal9"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="d3" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal10"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="d4" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal11"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="d5" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal1"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="d6" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal1"></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0 border" id="d7" data-bs-toggle="modal"
+                data-bs-target="#portfolioModal1"></div>
+        </div>
+    </div>
+
+    <!-- Modales de web -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales de Data -->
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal7">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal9">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal11">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container" id="modal12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/babel">
+        //IMPORTANTE: tener claro la diferencia entre cada uno
+        // this.newText <- las que creas normal. En este ejemplo son editar, borrar, guardar...
+        // this.props.newText <- cuando creo la tarjeta lo paso como paramentros
+        // this.state.newText <- se declara dentro de getInitialState, cambia con setState... Cada vez que se llama pinta de nuevo
+        // this.refs.newText <- variables privadas solo accesibles dentro de la clase
+
+        var Tarjeta = React.createClass(
+            {
+                getInitialState: function () {
+                    return { checked: false }
+                },
+                cambiaChequeo: function () {
+                    this.setState({ checked: !this.state.checked })
+                },
+                showModal: function () {
+                    $('#' + this.props.name + 'Modal').show();
+                    console.log('#' + this.props.name + 'Modal');
+                },
+                render: function () {
+                    var msg = "";
+                    if (this.state.checked) {
+                        msg = "está chequeado (checked)";
+                    } else {
+                        msg = "no está chequeado (no-checked)";
+                    }
+                    return (
+                        <div className="container-fluid text-center" onclick={this.showModal}>
+                            <img src={this.props.foto} width="400" height="207"></img>
+                            <h6>{this.props.nombre}</h6>
+                            <p>{this.props.texto}</p>
+                        </div>
+
+                    );
+                }
+            }
+        );
+
+        var MyModal = React.createClass(
+            { //El parametro de createClass es un JSON, 
+                //por lo que esta llave es para un JSON
+                getInitialState: function () {
+                    return { checked: false }
+                },
+                displayCodigo: function () {
+                    console.log("displayCodigo");
+
+                    if(this.state.checked){
+                        $('.codigoLibreria').hide();
+                    }
+                    else{
+                        $('.codigoLibreria').show();
+                    }
+                    this.setState({checked: !this.state.checked});
+                },
+                render: function () //Una función anonima
+                {//Esta segunda lave es para un bloque de código JS
+                    return (
+                        <div id={this.props.tipoid}>
+                            <div className="col">
+                                <img src={this.props.foto} width="250" height="107"></img>
+                            </div>
+                            <p> El checkbox {this.props.texto}.</p>
+                            <button onClick={this.displayCodigo} className="btn btn-warning"> Editar </button>
+                            <pre style={{"display": "none"}} className="codigoLibreria">
+                                <code>
+                                    function codigoDeEjemplo (a,b):<br></br>
+                                    sum = a + b;<br></br>
+                                    return sum;<br></br>
+
+                                </code>
+                            </pre>
+
+                        </div>
+
+                    );
+                }
+            }
+        );
+
+        //Render de los Modales
+        //Modales web
+        ReactDOM.render(
+            <MyModal foto="../images/django.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >Django</MyModal>,
+            document.getElementById('modal1')
+        );
+        ReactDOM.render(
+            <MyModal foto="../images/flask.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >flask</MyModal>,
+            document.getElementById('modal2')
+        );
+        ReactDOM.render(
+            <MyModal foto="../images/tornado.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >Django</MyModal>,
+            document.getElementById('modal3')
+        );
+        ReactDOM.render(
+            <MyModal foto="../images/web2py.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >web2py</MyModal>,
+            document.getElementById('modal4')
+        );
+        ReactDOM.render(
+            <MyModal foto="../images/bottle.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >bottle</MyModal>,
+            document.getElementById('modal5')
+        );
+        ReactDOM.render(
+            <MyModal foto="../images/cherrypy.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >cherrypy</MyModal>,
+            document.getElementById('modal6')
+        );
+
+
+        //Modales data
+        ReactDOM.render(
+            <MyModal foto="../images/numpy.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >numpy</MyModal>,
+            document.getElementById('modal7')
+        );
+        ReactDOM.render(
+            <MyModal foto="../images/pandas.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >pandas</MyModal>,
+            document.getElementById('modal8')
+        );
+        ReactDOM.render(
+            <MyModal foto="../images/matplotlib.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >matplotlib</MyModal>,
+            document.getElementById('modal9')
+        );
+        ReactDOM.render(
+            <MyModal foto="../images/tensorflow.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >tensorflow</MyModal>,
+            document.getElementById('modal10')
+        );
+        ReactDOM.render(
+            <MyModal foto="../images/scipy.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >scipy</MyModal>,
+            document.getElementById('modal11')
+        );
+        ReactDOM.render(
+            <MyModal foto="../images/keras.png"
+            texto="Esta libreria esta guapisima porque la importas y hace cosas"
+            >keras</MyModal>,
+            document.getElementById('modal12')
+        );
+
+        //Render de las tarjetas Web
+        ReactDOM.render(
+            <Tarjeta foto="../images/django.png"
+                nombre="Django"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('w0')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/flask.png"
+                nombre="Flask"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('w1')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/tornado.png"
+                nombre="Tornado"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('w2')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/web2py.jpg"
+                nombre="Web2py"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('w3')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/bottle.png"
+                nombre="Bottle"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('w4')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/cherrypy.png"
+                nombre="CherryPy"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('w5')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/falcon.png"
+                nombre="Falcon"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('w6')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/pyramid.png"
+                nombre="Pyramid"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('w7')
+        );
+
+        //Render de las tarjetas data
+        ReactDOM.render(
+            <Tarjeta foto="../images/numpy.png"
+                nombre="numpy"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('d0')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/pandas.png"
+                nombre="pandas"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('d1')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/matplotlib.jpg"
+                nombre="matplotlib"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('d2')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/tensorflow.png"
+                nombre="tensorflow"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('d3')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/scipy.png"
+                nombre="scipy"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('d4')
+        );
+        ReactDOM.render(
+            <Tarjeta foto="../images/keras.png"
+                nombre="keras"
+                texto="texto de relleno si me da tiempo lo cambio"
+            ></Tarjeta>,
+            document.getElementById('d5')
+        );
+
+    </script>
+</body>
+
+</html>

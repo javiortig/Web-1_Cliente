@@ -1,0 +1,21 @@
+examen pedira un react que llame a distintos renders.
+
+el año pasado era el juego de la memoria de cartas
+que dan las vueltas cuando pinchas en react.
+Monta un tablero. Este es un tablero que pinta imagenes.
+
+Si no lo sube, pedir a alguien examen del año pasao.
+
+Llevar tablero premontado pal examen.
+
+3.5 pts react. Dice que empezemos por react, si no nos sale q no nos paremos a debuguear
+
+
+se puede hacer por separado bootstrap y por separado react.
+
+Se puede hacer tambien todo junto. En teoria son apartados separados.
+
+el recomienda que traaigamos todo lo de clase y vayamos copiando poco a poco y testeando que funciona en vez de golpe.
+Mejor entregar un react que pinte algo que uno que no pinte.
+
+Axios entra como 1 punto. Es como el ajax de react. En el ejemplo 56 que los comentarios en vez de ser estaticos los coja de la api.

@@ -10,3 +10,7 @@
 .maquinaExtra{
     display: none; /*No mantiene el espacio*/
 }
+
+body {
+    background-color: #337f7f;
+}

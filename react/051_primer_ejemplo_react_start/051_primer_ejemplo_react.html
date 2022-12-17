@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+    <style>
+        #conborde {
+            border: solid 2px green;
+            padding: 10px;
+            margin: 5px
+        }
+
+        .caratula {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Bienvenido a las mejores peliculas de la U-TAD</h1>
+    <div id="contenedor1"></div>
+    <div id="contenedor2"></div>
+    <div id="contenedor3"></div>
+
+
+    <script type="text/babel">
+        //ReactDOM.render{PUNTERO_AL_DOM_VIRTUAL, PUNTERO_AL_DOM_REAL}
+        var Pepito = React.createClass({
+            render: function () {
+                return (
+                    <div id="conborde">
+                        <h2> titulo: {this.props.children}</h2>
+                        <img className="caratula" src={this.props.src}></img>
+                    </div>
+                )
+            }
+        });
+
+        ReactDOM.render(<Pepito src="https://3.bp.blogspot.com/-b4Xc7h5Bguk/Vyfzx9cyHpI/AAAAAAAAS_c/-WV2J_Ri0X8Udxn3MUz0BVwswcMuogQvACLcB/s1600/planet-51-movie-poster.jpg"> Planeta 51 </Pepito>, document.getElementById('contenedor1'));
+        ReactDOM.render(<Pepito src="https://i.ytimg.com/vi/5bBbYgVip2E/maxresdefault.jpg"> Que onda banda </Pepito>, document.getElementById('contenedor2'));
+        ReactDOM.render(<Pepito src="https://i.ytimg.com/vi/qtxtyve3bX0/hqdefault.jpg"> Peliculon pa ti </Pepito>, document.getElementById('contenedor3'));
+
+    </script>
+
+</body>
+
+</html>

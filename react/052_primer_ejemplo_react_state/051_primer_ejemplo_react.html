@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	
+	<style>
+		.conborde{
+			border: solid 1px green;
+			padding: 10px; 
+			margin:5px
+		}
+	</style>
+	
+</head>
+<body>
+
+	<h1> Bienvenido a las mejores peliculas de la U-TAD </h1>
+	<div class="row">
+		<div id="contenedor1" class="col-3"></div>
+		<div id="contenedor2" class="col-3"></div>
+		<div id="contenedor3" class="col-3"></div>
+	</div>
+
+	
+	<p> </p>
+	
+	<script type="text/babel">
+		// ReactDOM.render(PUNTERO_AL_DOM_VIRTUAL, PUNTERO_AL_DOM_REAL)
+		var Pepito = React.createClass({
+			getInitialState: function(){return {chequeado:false}},			
+			cambiaChequeo: function(){this.setState({chequeado:!this.state.chequeado})},			
+			editarenmicasa: function(){alert('dentro de editarenmicasa!');},			
+			borrarargentina: function(){alert('dentro de borrarargentina!');},			
+			render: function(){
+				var msg ;
+
+				if (this.state.chequeado){
+					msg = "esta chequeado!";
+				} else{
+					msg = "no chequeado!";
+				}
+				return(
+				<div className="conborde">
+					<h2> titulo: {this.props.children} </h2> 
+					<img src={this.props.imagen} className="col-12"/>
+					<button className="btn btn-warning" onClick={this.editarenmicasa}> Editar </button> 
+					<button className="btn btn-danger" onClick={this.borrarargentina}> Borrar </button> 
+					<input type="checkbox" onChange={this.cambiaChequeo}> Me gusta esta pelicula. </input>	
+					<h3> El checkbox está: {msg} </h3>				
+				</div>
+			)}
+		})
+
+		ReactDOM.render(<Pepito imagen="img/avatar2.png"> Avatar 2 </Pepito>, document.getElementById('contenedor1'))
+		ReactDOM.render(<Pepito imagen="img/theGoonies.png"> The Goonies </Pepito>, document.getElementById('contenedor2'))
+		ReactDOM.render(<Pepito imagen="img/matrix.png"> The Matrix </Pepito>, document.getElementById('contenedor3'))
+	</script>
+	
+
+
+</body>
+</html>

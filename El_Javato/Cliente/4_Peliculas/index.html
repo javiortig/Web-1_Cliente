@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<form>
+    <input type="text" id="searchBar">
+    <input type="button" value="Search" id="searchButton" onclick="searchFilms()">
+</form>
+<ul id="filmList">
+    <li>
+        <p class="titleContainer">${filmDetails.Title} (${filmDetails.Year})</p>
+        <div class="tables">
+            <div class="tableDiv detailsTable">
+                <table>
+                    <tr>
+                        <td rowspan="4" class="imageContainer">
+                            <img src=${filmDetails.Poster}>
+                            <!--<img src="https://www.sinrumbofijo.com/wp-content/uploads/2016/05/default-placeholder.png">-->
+                        </td>
+                        <td class="inTableTitle">
+                            Director
+                        </td>
+                        <td class="inTableTitle">
+                            Actors
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="directorContainer">
+                            ${filmDetails.Director}
+                        </td>
+                        <td class="actoresContainer">
+                            ${filmDetails.Actors}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inTableTitle">
+                            Awards
+                        </td>
+                        <td class="inTableTitle">
+                            Plot
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="awardsContainer">
+                            ${filmDetails.Awards}
+                        </td>
+                        <td rowspan="2" class="plotContainer">
+                            ${filmDetails.Plot}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableDiv ratingsTable">
+                <table>
+                    <tr>
+                        <td class="inTableTitle">
+                            Ratings
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstRatingContainer rating">
+                            <p>${filmDetails.Ratings[0].Source}</p>
+                            <p class="scoreValue">${filmDetails.Ratings[0].Value}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="secondRatingContainer rating">
+                            <p>${filmDetails.Ratings[1].Source}</p>
+                            <p class="scoreValue">${filmDetails.Ratings[1].Value}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="thirdRatingContainer rating">
+                            <p>${filmDetails.Ratings[2].Source}</p>
+                            <p class="scoreValue">${filmDetails.Ratings[2].Value}</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </li>
+</ul>
+
+
+</body>
+</html>

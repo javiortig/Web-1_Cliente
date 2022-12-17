@@ -1,0 +1,39 @@
+body {
+    font-family: Ebrima;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#messageBox {
+    font-size: 60px;
+}
+
+.sliderValues {
+    display: inline;
+    font-size: 20px;
+}
+
+.sliderLabel {
+    display: block;
+    margin-top: 40px;
+}
+
+#generateButton {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: 2px solid deepskyblue;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.sliderLabel {
+    font-size: 20px;
+}

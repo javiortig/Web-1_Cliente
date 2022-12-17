@@ -1,0 +1,221 @@
+/* Estilo cuerpo y textos */
+body {
+	background: hsl(0, 0%, 90%);
+}
+
+* {
+	color: #404040;
+	font-family: 'Comfortaa', Arial, sans-serif;
+	line-height: 1.5;
+}
+
+h2, h3
+{
+    clear: both;
+    font-family: 'Patua One', serif;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: #007489;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+	font-size: 18px;
+	margin-bottom: 1.5em;
+    color: #898989;
+}
+/* ---- */
+
+/* Estilo bloque de codigo */
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+    display: none;
+    width: 75%;
+	padding: 1.6em;
+}
+
+code {
+    width: 100px;
+    display: none;
+}
+
+code {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+#texto-mostrar-codigo {
+    cursor: pointer;
+}
+/* ---- */
+
+/* Estructura del cuerpo - Barra + contenido */
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.barra {
+    flex: 1;
+    width: 100%;
+}
+
+.contenido {
+    height: calc(100% - 2px);
+    overflow-y: auto;
+}
+/* ---- */
+
+/* Estilo de las tarjetas */
+img {
+	display: block;
+	border: 0;
+	min-height: 150px;
+	width: 100%;
+    object-fit:scale-down;
+	height: 10%;
+}
+
+.thumbnail {
+   display: inline-block;
+}
+
+.tarjeta {
+	background: white;
+	margin-bottom: 2em;
+    border-radius: 5px;
+
+    /* Sombras con animacion */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.tarjeta a {
+	color: black;
+	text-decoration: none;
+}
+
+.tarjeta:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-content {
+    flex-shrink: 0;
+	padding: 1.4em;
+}
+
+.card-content h2 {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-weight: bold;
+}
+
+.card-content p {
+	font-size: 80%;
+}
+/* ---- */
+
+/* Estructura flexbox para las tarjetas */
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    min-width: 0;
+}
+
+.tarjeta {
+	flex: 0 1 24%;
+    text-align: center;
+    min-width: 0;
+}
+/* ---- */
+
+/* Estilo de la barra superior de navegacion */
+.barra-nav {
+  background-color: rgb(51, 51, 51);
+  overflow: hidden;
+}
+
+.barra-nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.barra-nav a:hover {
+  background-color: #ffa500;
+  color: white;
+}
+
+.barra-nav a.active {
+  background-color: #ffa500;
+  color: white;
+}
+/* ---- */
+
+/* Cada tipo de libreria  */
+.tipolibreria  {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.tipolibreria > div {
+    text-align: center;
+    margin: auto;
+}
+
+.texto-retorno {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.anchor {
+    margin-top: -50px;
+}
+
+
+#libreria {
+    width: 80%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#libreria .texto {
+    text-align: justify;
+    justify-content: left;
+}
+
+#libreria h3 {
+    margin-bottom: 50px;
+}
+
+#libreria p {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+

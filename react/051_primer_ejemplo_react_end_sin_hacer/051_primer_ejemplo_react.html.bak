@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	
+	<style>
+		.conborde{
+			border: solid 1px green;
+			padding: 10px; 
+			margin:5px
+		}
+	</style>
+	
+</head>
+<body>
+
+	<h1> Bienvenido a las mejores peliculas de la U-TAD </h1>
+    <div id="contenedor1"></div>
+	<div id="contenedor2"></div>
+	<div id="contenedor3"></div>
+
+
+	
+	<p> </p>
+	
+	<script type="text/babel">
+		// ReactDOM.render(PUNTERO_AL_DOM_VIRTUAL, PUNTERO_AL_DOM_REAL)
+		var Pepito = React.createClass({
+			render: function(){return(
+				<div className="conborde">
+					<h2> titulo: {this.props.children} </h2> 
+					<img src={this.props.imagen} />
+				</div>
+			)}
+		})
+
+		ReactDOM.render(<Pepito imagen="http://teamc.pythonanywhere.com/static/scrambled_eggs.jpg"> Planeta 51 </Pepito>, document.getElementById('contenedor1'))
+		ReactDOM.render(<Pepito imagen="http://teamc.pythonanywhere.com/static/scrambled_eggs.jpg"> The Goonies </Pepito>, document.getElementById('contenedor2'))
+		ReactDOM.render(<Pepito imagen="http://teamc.pythonanywhere.com/static/scrambled_eggs.jpg"> The Matrix </Pepito>, document.getElementById('contenedor3'))
+	</script>
+	
+
+
+</body>
+</html>

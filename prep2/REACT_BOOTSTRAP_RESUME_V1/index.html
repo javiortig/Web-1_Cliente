@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Resume - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Clarence Taylor</span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                    src="assets/img/profile.jpg" alt="..." /></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#1">Clarence</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#2">Elisa</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#3">Marta</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Secciones dinámicas con React
+        <section class="resume-section" id="tarjeta1"></section>
+        <hr class="m-0" />
+        <section class="resume-section" id="tarjeta2"></section>
+        <hr class="m-0" />
+        <section class="resume-section" id="tarjeta3"></section>-->
+    <div id="1"></div>
+    <div id="2"></div>
+    <div id="3"></div>
+
+    <!-- Primero hay que poner Bootstrap y por último el React porque genera conflicto-->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- Templates de React-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+    <!--React-->
+    <script type="text/babel">
+        var Tarjeta = React.createClass(
+            {
+                getInitialState: function(){
+                    return {chequeado: false}
+                },
+                cambiaChequeo: function(){
+                    this.setState({chequeado: !this.state.chequeado})
+                },
+                editar: function (){
+                    alert("editando");
+                },
+                borrar: function (){
+                    alert("borrando");
+                },
+                render: function () {
+                    var cssClass = "";
+                    if (this.state.chequeado){
+                        cssClass="row";
+                    }
+                    else{
+                        cssClass="row d-none";
+                    }
+
+
+                    return (
+                        <section className="resume-section" id={this.props.miId}>
+                            <div className="resume-section-content">
+                                <h1 className="mb-0">
+                                    {this.props.nombre}
+                                    <span className="text-primary">{this.props.apellido}</span>
+                                </h1>
+                                <div className="subheading mb-5">
+                                    {this.props.direccion}
+                                    <a href="mailto:name@email.com">{this.props.email}</a>
+                                </div>
+                                <p className="lead mb-5"> {this.props.descripcion}</p>
+                                <div className="social-icons">
+                                    <a className="social-icon" href="#!"><i className="fab fa-linkedin-in"></i></a>
+                                    <a className="social-icon" href="#!"><i className="fab fa-github"></i></a>
+                                    <a className="social-icon" href="#!"><i className="fab fa-twitter"></i></a>
+                                    <a className="social-icon" href="#!"><i className="fab fa-facebook-f"></i></a>
+                                </div>
+                                <input type="checkbox" onChange={this.cambiaChequeo}>modo edición</input>
+                                <div className={cssClass}>
+                                    <button onClick={this.editar} className="btn btn-warning col-2 mx-1">Editar</button>
+                                    <button onClick={this.borrar} className="btn btn-danger col-2 mx-1">Borrar</button>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    );
+                }
+            }
+        );
+        ReactDOM.render(<Tarjeta
+            nombre="Clarence "
+            apellido="Taylor"
+            direccion="3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·"
+            descripcion="I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition."
+            miId="1">
+        </Tarjeta>, document.getElementById("1"));
+        ReactDOM.render(<Tarjeta
+            apellido="Alonso"
+            nombre="Elisa "
+            direccion="4583 Blue Street · Chayanne Wells, CO 80810 · (317) 585-8468 ·"
+            email="elisa@email.com"
+            descripcion="Hola me llamo Elisa"
+            miId="2">
+        </Tarjeta>, document.getElementById("2"));
+        ReactDOM.render(<Tarjeta
+            apellido="García"
+            nombre="Marta "
+            direccion="0011 Red Street · Cheyenne Bricks, CO 80810 · (317) 585-8468 ·"
+            descripcion="Hola me llamo Marta"
+            miId="3">
+        </Tarjeta>, document.getElementById("3"));
+
+    </script>
+</body>
+
+</html>
